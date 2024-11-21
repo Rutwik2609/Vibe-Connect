@@ -1,5 +1,6 @@
 import express from "express";
 import morgan from "morgan";
+import path from "path";
 import authRoutes from "./routes/auth.routes.js";
 import userRoutes from "./routes/user.routes.js";
 import postRoutes from "./routes/post.routes.js";
@@ -22,6 +23,8 @@ const app = express();
 
 const PORT = process.env.PORT || 8080;
 
+const __dirname =path.resolve();
+
 app.use(morgan('dev'));
 app.use(express.json({limit:"5mb"})) ;//To parse request body
 // limit shouldn't be too high to prevent DOS attack
@@ -32,6 +35,13 @@ app.use("/api/auth",authRoutes);
 app.use("/api/users",userRoutes);
 app.use("/api/posts",postRoutes);
 app.use("/api/notifications",notificationRoutes);
+
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static(path.join(__dirname, "/frontend/dist")));
+	app.get("*", (req, res) => {
+		res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+	});
+}
 
 app.listen(PORT,()=>{
     console.log(`Server running on port ${PORT}`);
