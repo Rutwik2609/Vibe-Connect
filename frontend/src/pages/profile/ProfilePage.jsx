@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import ProfileHeaderSkeleton from "../../components/skeletons/ProfileHeaderSkeleton";
-import EditProfileModal from "./EditProfileModal";
+import ProfileHeaderSkeleton from "../../components/skeletons/ProfileHeaderSkeleton.jsx";
+import EditProfileModal from "./EditProfileModal.jsx";
 
 
 import { FaArrowLeft } from "react-icons/fa6";
