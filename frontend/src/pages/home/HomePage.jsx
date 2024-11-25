@@ -1,16 +1,15 @@
 import { useState } from "react";
 
-import Posts from "../../components/common/Posts.jsx";
-import CreatePost from "./CreatePost.jsx";
+import Posts from "../../components/common/posts";
+import CreatePost from "./CreatePost";
 import Searchbar from "../../components/common/Searchbar.jsx";
+
 
 const HomePage = () => {
 	const [feedType, setFeedType] = useState("forYou");
 
 	return (
-		<>
-
-			
+		<>	
 			
 			<div className='flex-[4_4_0] mr-auto border-r border-gray-700 min-h-screen'>
 			<Searchbar/>
