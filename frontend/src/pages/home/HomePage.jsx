@@ -4,7 +4,6 @@ import Posts from "../../components/common/posts";
 import CreatePost from "./CreatePost";
 import Searchbar from "../../components/common/Searchbar.jsx";
 
-
 const HomePage = () => {
 	const [feedType, setFeedType] = useState("forYou");
 

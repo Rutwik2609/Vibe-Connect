@@ -4,13 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "dev": " nodemon backend/server.js",
     "start": " node backend/server.js",
-=======
-    "dev": "NODE_ENV=development nodemon backend/server.js",
-    "start": "NODE_ENV=production node backend/server.js",
->>>>>>> 256052aa5f6d5bfb301ac785221695e9afc18212
     "build": " npm install && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],
