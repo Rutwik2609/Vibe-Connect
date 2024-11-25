@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import useUpdateUserProfile from "../../hooks/useUpdateUserProfile";
-import { Navigate} from "react-router-dom";
+import useUpdateUserProfile from "../../hooks/useUpdateUserProfile.jsx";
 
 const EditProfileModal = ({authUser}) => {
 	const [redirectTo, setRedirectTo] = useState(null);

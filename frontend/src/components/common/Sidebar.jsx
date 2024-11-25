@@ -8,8 +8,11 @@ import { BiLogOut } from "react-icons/bi";
 import { useQueryClient, useMutation, useQuery } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 
+
+
 const Sidebar = () => {
 	const {data } = useQuery({queryKey:["authUser"]})
+
 
 	const queryClient = useQueryClient();
 

@@ -14,6 +14,7 @@ import ProfilePage from './pages/profile/ProfilePage.jsx'
 import Sidebar from './components/common/Sidebar.jsx'
 import RightPanel from "./components/common/RightPanel";
 import LoadingSpinner from './components/common/LoadingSpinner.jsx'
+import Searchbar from './components/common/Searchbar.jsx'
 
 
 
