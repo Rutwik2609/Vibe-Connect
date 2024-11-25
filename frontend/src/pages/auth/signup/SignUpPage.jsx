@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { json, Link, useNavigate } from "react-router-dom";
-=======
-import { json, Link ,useNavigate } from "react-router-dom";
->>>>>>> 256052aa5f6d5bfb301ac785221695e9afc18212
 import { useState } from "react";
 
 import XSvg from "../../../components/svgs/X.jsx";
@@ -15,14 +11,8 @@ import { useMutation } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 
 const SignUpPage = () => {
-<<<<<<< HEAD
 	const navigate = useNavigate();
 
-=======
-
-	const navigate = useNavigate();
-	
->>>>>>> 256052aa5f6d5bfb301ac785221695e9afc18212
 	const [formData, setFormData] = useState({
 		email: "",
 		username: "",
@@ -52,11 +42,7 @@ const SignUpPage = () => {
 			}
 		},
 		onSuccess:()=>{
-<<<<<<< HEAD
 			toast.success("👤Account created succefully !")
-=======
-			toast.success("👤Account created succefully !");
->>>>>>> 256052aa5f6d5bfb301ac785221695e9afc18212
 			navigate('/login');
 		}
 	});
