@@ -9,12 +9,16 @@ import { useQueryClient, useMutation, useQuery } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 import LoadingSpinner from "../../components/common/LoadingSpinner";
 
+import { formatPostDate } from "../../utils/date";
+
 const Post = ({ post }) => {
 	const [comment, setComment] = useState("");
 	const queryClient = useQueryClient();
 	const formattedDate = "1h";
 	const postOwner = post.user;
 	const { data: authUser } = useQuery({ queryKey: ["authUser"] });
+
+	const formattedDate = formatPostDate(post.createdAt);
 
 	const { mutate: likePost, isPending: isLiking } = useMutation({
 		mutationFn: async () => {
